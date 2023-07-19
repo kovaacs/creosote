@@ -67,12 +67,10 @@ class DependencyReader:
 
         dep_strings = []
         if isinstance(section_contents, list):
-            for dep_string in section_contents:
-                dep_strings.append(dep_string)
+            dep_strings.extend(section_contents)
         elif isinstance(section_contents, dict):
             for dep_string_list in section_contents.values():
-                for dep_string in dep_string_list:
-                    dep_strings.append(dep_string)
+                dep_strings.extend(dep_string_list)
         else:
             raise TypeError("Unexpected dependency format, list expected.")
 

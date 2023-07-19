@@ -48,7 +48,7 @@ class CustomAppendAction(argparse.Action):
 def parse_args(args):
     parser = argparse.ArgumentParser(
         description=(
-            "Prevent bloated virtual environments by identifing installed, "
+            "Prevent bloated virtual environments by identifying installed, "
             "but unused, dependencies"
         ),
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,

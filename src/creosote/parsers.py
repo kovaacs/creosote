@@ -70,7 +70,7 @@ class DependencyReader:
             for dep_string in section_contents:
                 dep_strings.append(dep_string)
         elif isinstance(section_contents, dict):
-            for _, dep_string_list in section_contents.items():
+            for dep_string_list in section_contents.values():
                 for dep_string in dep_string_list:
                     dep_strings.append(dep_string)
         else:
